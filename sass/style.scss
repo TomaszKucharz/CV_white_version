@@ -88,47 +88,12 @@ body {
     margin-left: $margin-leftIcon;
   }
 }
-@media (max-width: 400px) {
+@media (max-width: 300px) {
   body {
     display: none;
   }
 }
-// @media only screen and(min-width:300px) and (max-width: 400px) {
-//   body {
-//     display: flex;
-//   }
-//   .page {
-//     margin-top: 0;
-//     .data {
-//       width: clamp(70%, 80%, 80%);
-//     }
-//     .userName {
-//       margin: 2vh 0 1vh 3vw;
-//     }
-//     .ribbon {
-//       margin: 0 auto;
-//       width: 90%;
-//       height: 2px;
-//     }
-//     .skills {
-//       margin: 3vh 3vw;
-//       width: clamp(8vw, 95%, 800px);
-//     }
-//     .box {
-//       width: 90%;
-//     }
-//     h2 {
-//       display: inline-block;
-//       font-size: $font-h2-Size;
-//       text-align: left;
-//       width: 85%;
-//       cursor: pointer;
-//       .fas {
-//         font-size: 10px;
-//       }
-//     }
-//   }
-// }
+
 @media only screen and (min-width: 300px) and (max-width: 480px) {
   body {
     display: flex;
