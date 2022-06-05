@@ -6,6 +6,4 @@ fourH2.addEventListener(`click`, () => {
   fourBox.classList.toggle("active");
   fourBox.classList.toggle("off");
   fourIcon.classList.toggle(`rotateIcon`);
-  fourIcon.classList.toggle(`colorArrow`);
-  fourIcon.classList.toggle(`marginLeft`);
 });

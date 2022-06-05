@@ -1,4 +1,4 @@
-@import '.variables';
+@import '_variables';
 * {
 	box-sizing: border-box;
 	padding: 0;
@@ -63,6 +63,8 @@ body {
 		cursor: pointer;
 		.fas {
 			font-size: 10px;
+			margin-left: $margin-leftIcon;
+			color: red;
 		}
 	}
 
@@ -80,12 +82,6 @@ body {
 	}
 	.rotateIcon {
 		transform: rotate(180deg);
-	}
-	.colorArrow {
-		color: red;
-	}
-	.marginLeft {
-		margin-left: $margin-leftIcon;
 	}
 }
 @media (max-width: 300px) {
