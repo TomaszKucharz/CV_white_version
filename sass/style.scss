@@ -1,275 +1,306 @@
-@import '_variables';
+@import "_variables";
 * {
-	box-sizing: border-box;
-	padding: 0;
-	margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 body {
-	display: flex;
-	align-content: center;
-	justify-content: center;
-	background-color: $background-light;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: $background-light;
 }
 .page {
-	margin-top: 2vh;
-	width: clamp(800px, 850px, 900px);
-	min-height: 30vh;
-	border: $border-page-light;
-	border-radius: 30px;
-	background-color: $background-page-light;
-	.data {
-		border: $box-border-light;
-		margin: 3vh 0 0 2vw;
-		width: clamp(30%, 50%, 50%);
-		min-height: 10vh;
-		p {
-			font-size: $font-Data-Size;
-			color: red;
-		}
-	}
-	.userName {
-		margin: 2vh 0 1vh 3vw;
-		font-family: $font-Open-Sans;
-	}
-	.ribbon {
-		margin: 0 auto;
-		width: 90%;
-		height: 2px;
-		background-color: $ribbon-light;
-	}
-	.skills {
-		margin: 5vh 3vw;
-		width: clamp(8vw, 70%, 800px);
-		min-height: 20vh;
-		border: $box-border-light;
-		h2 {
-			font-family: $font-Montserrat;
-		}
-		p {
-			color: #595959;
-		}
-	}
-	.box {
-		border: $box-border-light;
-		margin: 2vh auto 2vh;
-		width: 80%;
-	}
-	h2 {
-		display: inline-block;
-		font-family: $font-Montserrat;
-		font-size: $font-h2-Size;
-		text-align: left;
-		width: 85%;
-		cursor: pointer;
-		.fas {
-			font-size: 10px;
-			margin-left: $margin-leftIcon;
-			color: red;
-		}
-	}
-
-	p {
-		margin: 2vh;
-		font-size: $font-Size;
-		font-family: $font-Roboto;
-		color: $font-Color-Blue;
-	}
-	.active {
-		display: block;
-	}
-	.off {
-		display: none;
-	}
-	.rotateIcon {
-		transform: rotate(180deg);
-	}
+  margin-top: 2vh;
+  width: clamp(800px, 850px, 900px);
+  min-height: 30vh;
+  border: $border-page-light;
+  border-radius: 30px;
+  background-color: $background-page-light;
+  .data {
+    border: $box-border-light;
+    margin: 3vh 0 0 2vw;
+    width: clamp(30%, 50%, 50%);
+    min-height: 10vh;
+    p {
+      font-size: $font-Data-Size;
+      color: red;
+    }
+  }
+  .userName {
+    margin: 2vh 0 1vh 3vw;
+    font-family: $font-Open-Sans;
+  }
+  .ribbon {
+    margin: 0 auto;
+    width: 90%;
+    height: 2px;
+    background-color: $ribbon-light;
+  }
+  .skills {
+    margin: 5vh 3vw;
+    width: clamp(8vw, 70%, 800px);
+    min-height: 20vh;
+    border: $box-border-light;
+    h2 {
+      font-family: $font-Montserrat;
+    }
+    p {
+      color: #595959;
+    }
+  }
+  .box {
+    border: $box-border-light;
+    margin: 2vh auto 2vh;
+    width: 80%;
+  }
+  h2 {
+    display: inline-block;
+    font-family: $font-Montserrat;
+    font-size: $font-h2-Size;
+    text-align: left;
+    width: 85%;
+    cursor: pointer;
+    .fas {
+      font-size: 10px;
+      margin-left: $margin-leftIcon;
+      color: red;
+    }
+  }
+  h2:hover {
+    animation: moveH2 1s infinite ease;
+  }
+  p {
+    margin: 2vh;
+    font-size: $font-Size;
+    font-family: $font-Roboto;
+    color: $font-Color-Blue;
+  }
+  .active {
+    display: block;
+  }
+  .off {
+    display: none;
+  }
+  .rotateIcon {
+    transform: rotate(180deg);
+  }
+  @keyframes moveH2 {
+    0% {
+      transform: translateX(-1px);
+    }
+    12.5% {
+      transform: translateX(1px);
+    }
+    25% {
+      transform: translateX(-1px);
+    }
+    37.5% {
+      transform: translateX(1px);
+    }
+    50% {
+      transform: translateX(-1px);
+    }
+    62.5% {
+      transform: translateX(1px);
+    }
+    75% {
+      transform: translateX(-1px);
+    }
+    87.5% {
+      transform: translateX(1px);
+    }
+    100% {
+      transform: translateX(-1px);
+    }
+  }
 }
 /*
 Media Queries ...
 */
 @media (max-width: 300px) {
-	body {
-		display: none;
-	}
+  body {
+    display: none;
+  }
 }
 @media only screen and (min-width: 400px) and (max-width: 480px) {
-	body {
-		display: flex;
-	}
-	.page {
-		margin-top: 0;
-		.data {
-			width: clamp(70%, 80%, 80%);
-		}
-		.userName {
-			margin: 2vh 0 1vh 3vw;
-		}
-		.ribbon {
-			margin: 0 auto;
-			width: 90%;
-			height: 2px;
-		}
-		.skills {
-			margin: 3vh 3vw;
-			width: clamp(8vw, 95%, 800px);
-		}
-		.box {
-			width: 90%;
-		}
-		h2 {
-			display: inline-block;
-			font-size: $font-h2-Size;
-			text-align: left;
-			width: 85%;
-			cursor: pointer;
-			.fas {
-				font-size: 10px;
-			}
-		}
-	}
+  body {
+    display: flex;
+  }
+  .page {
+    margin-top: 0;
+    .data {
+      width: clamp(70%, 80%, 80%);
+    }
+    .userName {
+      margin: 2vh 0 1vh 3vw;
+    }
+    .ribbon {
+      margin: 0 auto;
+      width: 90%;
+      height: 2px;
+    }
+    .skills {
+      margin: 3vh 3vw;
+      width: clamp(8vw, 95%, 800px);
+    }
+    .box {
+      width: 90%;
+    }
+    h2 {
+      display: inline-block;
+      font-size: $font-h2-Size;
+      text-align: left;
+      width: 85%;
+      cursor: pointer;
+      .fas {
+        font-size: 10px;
+      }
+    }
+  }
 }
 @media only screen and (min-width: 481px) and (max-width: 760px) {
-	.page {
-		margin-top: 0;
-		min-height: 30vh;
-		.ribbon {
-			margin: 0 auto;
-			width: 90%;
-			height: 2px;
-		}
-		.skills {
-			width: clamp(8vw, 95%, 800px);
-		}
-		.box {
-			border: $box-border-light;
-			margin: 2vh auto 2vh;
-			width: 90%;
-		}
-		h2 {
-			display: inline-block;
-		}
-	}
+  .page {
+    margin-top: 0;
+    min-height: 30vh;
+    .ribbon {
+      margin: 0 auto;
+      width: 90%;
+      height: 2px;
+    }
+    .skills {
+      width: clamp(8vw, 95%, 800px);
+    }
+    .box {
+      border: $box-border-light;
+      margin: 2vh auto 2vh;
+      width: 90%;
+    }
+    h2 {
+      display: inline-block;
+    }
+  }
 }
 
 @media only screen and (min-width: 761px) and (max-width: 799px) {
-	body {
-		display: flex;
-		align-content: center;
-		justify-content: center;
-		background-color: $background-light;
-	}
-	.page {
-		margin-top: 2vh;
-	}
-	.userName {
-		margin: 2vh 0 1vh 5vw;
-		font-family: $font-Open-Sans;
-	}
-	.ribbon {
-		margin: 0 auto;
-		width: 90%;
-		height: 2px;
-		background-color: $ribbon-light;
-	}
-	.skills {
-		margin: 5vh 3vw;
-		width: clamp(8vw, 70%, 800px);
-		min-height: 20vh;
-		border: $box-border-light;
-		h2 {
-			font-family: $font-Fira-Code;
-		}
-		p {
-			color: #595959;
-		}
-	}
+  body {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: $background-light;
+  }
+  .page {
+    margin-top: 2vh;
+  }
+  .userName {
+    margin: 2vh 0 1vh 5vw;
+    font-family: $font-Open-Sans;
+  }
+  .ribbon {
+    margin: 0 auto;
+    width: 90%;
+    height: 2px;
+    background-color: $ribbon-light;
+  }
+  .skills {
+    margin: 5vh 3vw;
+    width: clamp(8vw, 70%, 800px);
+    min-height: 20vh;
+    border: $box-border-light;
+    h2 {
+      font-family: $font-Fira-Code;
+    }
+    p {
+      color: #595959;
+    }
+  }
 }
 
 @media only screen and (min-width: 800px) {
-	.page {
-		margin-top: 2vh;
+  .page {
+    margin-top: 2vh;
 
-		.userName {
-			margin: 2vh 0 1vh 5vw;
-		}
-		.ribbon {
-			height: 5px;
-		}
-		.skills {
-			margin: 5vh 3vw;
-			width: clamp(8vw, 70%, 800px);
-			min-height: 20vh;
-			border: $box-border-light;
-			h2 {
-				font-family: $font-Montserrat;
-			}
-			p {
-				color: #595959;
-			}
-		}
-		.box {
-			border: $box-border-light;
-			margin: 2vh auto 2vh;
-			width: 80%;
-		}
-		h2 {
-			display: inline-block;
-			font-family: $font-Montserrat;
-			font-size: $font-h2-Size;
-			text-align: left;
-			width: 85%;
-			cursor: pointer;
-			.fas {
-				font-size: 10px;
-			}
-		}
+    .userName {
+      margin: 2vh 0 1vh 5vw;
+    }
+    .ribbon {
+      height: 5px;
+    }
+    .skills {
+      margin: 5vh 3vw;
+      width: clamp(8vw, 70%, 800px);
+      min-height: 20vh;
+      border: $box-border-light;
+      h2 {
+        font-family: $font-Montserrat;
+      }
+      p {
+        color: #595959;
+      }
+    }
+    .box {
+      border: $box-border-light;
+      margin: 2vh auto 2vh;
+      width: 80%;
+    }
+    h2 {
+      display: inline-block;
+      font-family: $font-Montserrat;
+      font-size: $font-h2-Size;
+      text-align: left;
+      width: 85%;
+      cursor: pointer;
+      .fas {
+        font-size: 10px;
+      }
+    }
 
-		p {
-			margin: 2vh;
-			font-size: $font-Size;
-			font-family: $font-Roboto;
-			color: $font-Color-Blue;
-		}
-	}
+    p {
+      margin: 2vh;
+      font-size: $font-Size;
+      font-family: $font-Roboto;
+      color: $font-Color-Blue;
+    }
+  }
 }
 @media only screen and (min-width: 1366px) {
-	.page {
-		.data {
-			border: $box-border-light;
-			margin: 3vh 0 0 2vw;
-			width: clamp(30%, 50%, 50%);
-			min-height: 10vh;
-			p {
-				font-size: $font-Data-Size;
-				color: red;
-			}
-		}
-		.userName {
-			margin: 2vh 0 1vh 3vw;
-			font-family: $font-Open-Sans;
-		}
-		.box {
-			border: $box-border-light;
-			margin: 2vh auto 2vh;
-			width: 80%;
-		}
-		h2 {
-			display: inline-block;
-			font-family: $font-Montserrat;
-			font-size: $font-h2-Size;
-			text-align: left;
-			width: 85%;
-			cursor: pointer;
-			.fas {
-				font-size: 10px;
-			}
-		}
+  .page {
+    .data {
+      border: $box-border-light;
+      margin: 3vh 0 0 2vw;
+      width: clamp(30%, 50%, 50%);
+      min-height: 10vh;
+      p {
+        font-size: $font-Data-Size;
+        color: red;
+      }
+    }
+    .userName {
+      margin: 2vh 0 1vh 3vw;
+      font-family: $font-Open-Sans;
+    }
+    .box {
+      border: $box-border-light;
+      margin: 2vh auto 2vh;
+      width: 80%;
+    }
+    h2 {
+      display: inline-block;
+      font-family: $font-Montserrat;
+      font-size: $font-h2-Size;
+      text-align: left;
+      width: 85%;
+      cursor: pointer;
+      .fas {
+        font-size: 10px;
+      }
+    }
 
-		p {
-			margin: 2vh;
-			font-size: $font-Size;
-			font-family: $font-Roboto;
-			color: $font-Color-Blue;
-		}
-	}
+    p {
+      margin: 2vh;
+      font-size: $font-Size;
+      font-family: $font-Roboto;
+      color: $font-Color-Blue;
+    }
+  }
 }
